@@ -1,0 +1,18 @@
+<h1>Bouh</h1>
+
+
+{% for plat in tous_les_plats %}
+
+    <div class="plats">
+
+        <h3>{{ plat.nom }}</h3>
+
+        <p>{{ plat.contenu|truncatewords_html:80 }}</p>
+
+    </div>
+
+{% empty %}
+
+    <p>Aucun plat.</p>
+
+{% endfor %}
